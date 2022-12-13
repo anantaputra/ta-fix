@@ -8,12 +8,6 @@ use App\Http\Controllers\Api\MidtransController;
 
 class HomeController extends Controller
 {
-    public function bayar()
-    {
-        $token = MidtransController::config();
-        return $token;
-    }
-
     public function index()
     {
         $terbaru = Produk::latest()->limit(3)->get();

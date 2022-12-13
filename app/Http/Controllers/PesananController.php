@@ -27,7 +27,7 @@ class PesananController extends Controller
         $transaksi->id_transaksi = $json->order_id;
         $transaksi->metode = $json->payment_type;
         $transaksi->total = $json->gross_amount;
-        $transaksi->kode_bayar = $json->pdf_url;
+        $transaksi->kode_bayar = $json->pdf_url ?? null;
         $transaksi->status = $json->transaction_status;
         $transaksi->save();
 
